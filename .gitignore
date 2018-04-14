@@ -102,6 +102,7 @@ ENV/
 
 # IDE stuffs
 .vscode/
+.idea/
 
 # app ignores
 token.ini

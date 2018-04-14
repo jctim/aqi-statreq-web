@@ -33,6 +33,6 @@ def station_id():
 
 
 if __name__ == "__main__":
-    print("pre")
+    print("starting web server")
     app.run(host="0.0.0.0")
-    print("post")
+    print("started web server")
