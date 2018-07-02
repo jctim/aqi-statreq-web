@@ -33,6 +33,8 @@ def station_id():
 
 
 if __name__ == "__main__":
-    print("starting web server")
-    app.run(host="0.0.0.0")
-    print("started web server")
+    print("starting web server on port", os.environ['PORT'])
+    logging.info("starting web server on port " + os.environ['PORT'])
+    app.run(host="0.0.0.0", port=int(os.environ['PORT']))
+    print("stopped web server")
+    logging.info("stopped web server")
