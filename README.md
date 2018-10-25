@@ -43,13 +43,13 @@ $ brew install docker
 Then you may build the image locally or pull it from the Docker Hub
 
   - Build image locally
-    ```
-    docker build --rm -t jctim/aqi-statreq:latest .
-    ```
+```
+$ docker build --rm -t jctim/aqi-statreq:latest .
+```
   - Pull image from the Docker Hub
-    ```
-    $ docker pull jctim/aqi-statreq:latest .
-    ```
+```
+$ docker pull jctim/aqi-statreq:latest .
+```
 
 
 ### Run
