@@ -1,11 +1,12 @@
-# our base image
 FROM python:3-onbuild
+LABEL Name=aqi-statreq-web Version=0.0.1
 
-# specify the port number the container should expose
-EXPOSE 5000
+RUN python3 -m pip install --upgrade pip setuptools wheel
 
-COPY app/ /opt/aqi-app/
 WORKDIR /opt/aqi-app
 
-# run the application
+COPY requirements.txt .
+RUN python3 -m pip --no-cache-dir install -r requirements.txt
+
+COPY app/ .
 CMD ["python", "./main.py"]
