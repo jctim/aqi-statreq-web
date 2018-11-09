@@ -1,4 +1,4 @@
-FROM python:3-onbuild
+FROM python:3.7-alpine
 LABEL Name=aqi-statreq-web Version=0.0.1
 
 RUN python3 -m pip install --upgrade pip setuptools wheel
