@@ -24,7 +24,7 @@ def station_id():
     if request.method == 'POST':
         keyword = request.form['keyword']
         logging.info(keyword)
-        msg = post(f'https://api.waqi.info/search/?keyword={keyword}&token={token}')
+        msg = post(f'https://api.waqi.info/search/?keyword={keyword}&token={token}', verify=False)
         logging.info(msg.json()['data'])
         data = [f"name: {x['station']['name']}, station id: @{x['uid']}"
                 for x in msg.json()['data']]
